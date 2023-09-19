@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fcatteau <fcatteau@student.42.fr>          +#+  +:+       +#+         #
+#    By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 18:42:37 by fcatteau          #+#    #+#              #
-#    Updated: 2023/09/16 22:11:38 by fcatteau         ###   ########.fr        #
+#    Updated: 2023/09/19 14:43:38 by feliciencat      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJS = $(SRCS:.c=.o)
 
 HEADERS = -I ./Includes/
 
-CFLAGS =  -Wall -Werror -Wextra #-fsanitize=thread
+CFLAGS =  -Wall -Werror -Wextra -fsanitize=thread
 
 $(NAME): $(OBJS)
 	gcc $(CFLAGS) $(HEADERS) -o $(NAME) $(OBJS) -lpthread

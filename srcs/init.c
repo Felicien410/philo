@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcatteau <fcatteau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:06 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/16 23:10:57 by fcatteau         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:02:49 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	init_philo(t_all *all_data)
 	all_data->philosophers = malloc(all_data->global.number_of_philosophers
 			* sizeof(t_philo));
 	all_data->global.the_start = actual_time();
-	all_data->global.all_finish_philo = 0;
 	all_data->global.philo_died = 0;
 	all_data->global.almost_satisfied = 0;
 	while (i < all_data->global.number_of_philosophers)
@@ -63,6 +62,7 @@ void	init_mut(t_all *all_data)
 	int	i;
 
 	i = 0;
+	all_data->global.all_finish_philo = 0;
 	while (i < all_data->global.number_of_philosophers)
 	{
 		pthread_mutex_init(&(all_data->global.mut[i]), NULL);

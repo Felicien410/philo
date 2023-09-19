@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcatteau <fcatteau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:51 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/16 22:31:29 by fcatteau         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:20:11 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ long	ft_atoi(const char *str)
 	i = 0;
 	neg = 1;
 	result = 0;
-	while (str[i] != '\0' && (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
+	while (str[i] != '\0' && (str[i] == 32
+			|| str[i] == '\t' || str[i] == '\n'
 			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
 		i++;
 	if (str[i] != '\0' && str[i] == '-')

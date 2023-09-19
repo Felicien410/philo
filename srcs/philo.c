@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcatteau <fcatteau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:33 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/16 23:06:38 by fcatteau         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:19:50 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	free_destroy(t_all *all_data)
 	pthread_mutex_destroy(&all_data->global.enable_writing);
 	pthread_mutex_destroy(&all_data->global.the_dead);
 	pthread_mutex_destroy(&all_data->global.finish_unq_philo_mut);
-
 	pthread_mutex_destroy(&all_data->global.check);
 	pthread_mutex_destroy(&all_data->global.check_died);
 }
