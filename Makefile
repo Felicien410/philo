@@ -24,7 +24,7 @@ OBJS = $(SRCS:.c=.o)
 
 HEADERS = -I ./Includes/
 
-CFLAGS =  -Wall -Werror -Wextra -fsanitize=thread
+CFLAGS =  -Wall -Werror -Wextra
 
 $(NAME): $(OBJS)
 	gcc $(CFLAGS) $(HEADERS) -o $(NAME) $(OBJS) -lpthread
