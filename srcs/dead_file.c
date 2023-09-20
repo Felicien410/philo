@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dead_file.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcatteau <fcatteau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:26 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/16 22:08:01 by fcatteau         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:35:47 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	handle_single_philosopher(t_philo *philo)
 
 int	check_death_time(t_philo *philo, long int actual)
 {
-	if (diffe_time(actual, philo->last_meal_time) > philo->g->time_to_die)
+	if ((diffe_time(actual, philo->last_meal_time) + 1) > philo->g->time_to_die)
 	{
 		pthread_mutex_lock(&philo->g->check_died);
 		philo->g->philo_died = 1;

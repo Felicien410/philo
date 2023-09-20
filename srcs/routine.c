@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:18 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/20 17:16:20 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/20 17:30:26 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	print_thinking_routine(t_philo *philo)
 		{
 			pthread_mutex_lock(&philo->g->enable_writing);
 			write_status("is thinking\n", philo);
-			pthread_mutex_lock(&philo->g->enable_writing);
+			pthread_mutex_unlock(&philo->g->enable_writing);
 			pthread_mutex_unlock(&philo->g->check_died);
 			pthread_mutex_unlock(&philo->g->check);
 			return ;
@@ -92,9 +92,9 @@ void	*philosopher_routine(void *arg)
 {
 	t_philo	*philo;
 
-	//philo = (t_philo *) arg;
+	philo = (t_philo *) arg;
 	//if (philo->id % 2 == 0 && philo->g->number_of_philosophers > 1)
-		ft_usleep(philo->g->time_to_eat / 10);
+	//	ft_usleep(philo->g->time_to_eat / 10);
 	while (1)
 	{
 		pthread_mutex_lock(&philo->g->check_died);
