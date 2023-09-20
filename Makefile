@@ -6,7 +6,7 @@
 #    By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 18:42:37 by fcatteau          #+#    #+#              #
-#    Updated: 2023/09/19 14:43:38 by feliciencat      ###   ########.fr        #
+#    Updated: 2023/09/20 17:44:20 by feliciencat      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJS = $(SRCS:.c=.o)
 
 HEADERS = -I ./Includes/
 
-CFLAGS =  -Wall -Werror -Wextra
+CFLAGS =  -Wall -Werror -Wextra -O2
 
 $(NAME): $(OBJS)
 	gcc $(CFLAGS) $(HEADERS) -o $(NAME) $(OBJS) -lpthread
