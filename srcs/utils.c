@@ -6,26 +6,11 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:51 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/19 15:20:11 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/20 17:12:48 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/philo.h"
-
-void	ft_putstr_fd(char *s, int fd)
-{
-	int	i;
-
-	i = 0;
-	if (s)
-	{
-		while (s[i])
-		{
-			write (fd, &s[i], 1);
-			i++;
-		}
-	}
-}
 
 int	ft_isdigit(int c)
 {
