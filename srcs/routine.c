@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:18 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/20 17:47:23 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/20 17:49:30 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ void	*philosopher_routine(void *arg)
 		{
 			pthread_mutex_unlock(&philo->g->check_died);
 			philosopher_routine_start(philo);
-			usleep(500);
+			usleep(600);
 		}
 		else
 		{
