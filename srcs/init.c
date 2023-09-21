@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:06 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/21 07:55:39 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 08:08:38 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	init_philo(t_all *all_data)
 	i = 0;
 	all_data->philosophers = malloc(all_data->global.number_of_philosophers
 			* sizeof(t_philo));
-	all_data->global.the_start = actual_time();
 	all_data->global.philo_died = 0;
 	all_data->global.almost_satisfied = 0;
 	while (i < all_data->global.number_of_philosophers)
