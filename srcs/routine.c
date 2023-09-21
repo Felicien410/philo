@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:18 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/21 09:25:30 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 09:30:30 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,6 @@ void	*philosopher_routine(void *arg)
 	t_philo	*philo;
 
 	philo = (t_philo *) arg;
-	
 	if (philo->id % 2 == 0 && philo->g->number_of_philosophers > 1)
 		ft_usleep(philo->g->time_to_eat / 10);
 	while (1)
