@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:18 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/21 08:09:31 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 08:24:20 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	print_thinking_routine(t_philo *philo)
 void	philosopher_routine_start(t_philo *philo)
 {
 	philo_eat(philo);
-	print_sleep_routine(philo);
+	philo_sleep(philo);
 	print_thinking_routine(philo);
 }
 
