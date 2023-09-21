@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:06 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/21 08:30:19 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 09:26:09 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	init_threads(t_all *all_data)
 	i = 0;
 	all_data->global.threads = (pthread_t *)malloc(
 			all_data->global.number_of_philosophers * sizeof(pthread_t));
+	all_data->global.the_start = actual_time();
 	while (i < all_data->global.number_of_philosophers)
 	{
 		pthread_create(&all_data->global.threads[i], NULL,

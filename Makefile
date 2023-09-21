@@ -6,7 +6,7 @@
 #    By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 18:42:37 by fcatteau          #+#    #+#              #
-#    Updated: 2023/09/20 17:44:20 by feliciencat      ###   ########.fr        #
+#    Updated: 2023/09/21 09:26:24 by feliciencat      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJS = $(SRCS:.c=.o)
 
 HEADERS = -I ./Includes/
 
-CFLAGS =  -Wall -Werror -Wextra -O2
+CFLAGS =  -Wall -Werror -Wextra -O2 #-fsanitize=thread
 
 $(NAME): $(OBJS)
 	gcc $(CFLAGS) $(HEADERS) -o $(NAME) $(OBJS) -lpthread
