@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:06 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/19 15:02:49 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 07:55:39 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	init_philo(t_all *all_data)
 	all_data->global.almost_satisfied = 0;
 	while (i < all_data->global.number_of_philosophers)
 	{
-		all_data->philosophers[i].id = i;
+		all_data->philosophers[i].id = i + 1;
 		all_data->philosophers[i].g = &all_data->global;
 		all_data->philosophers[i].number_meal_eat = 0;
 		all_data->philosophers[i].last_meal_time = 0;
