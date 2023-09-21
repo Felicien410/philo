@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcatteau <fcatteau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 08:37:08 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/16 23:06:24 by fcatteau         ###   ########.fr       */
+/*   Updated: 2023/09/21 08:31:02 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ typedef struct s_all
 	t_global		global;
 }					t_all;
 
+void	philo_sleep(t_philo *philo);
 void				write_status(char *str, t_philo *philo);
 long				actual_time(void);
 void				ft_usleep(long time);
