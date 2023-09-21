@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:18 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/21 09:17:34 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 09:21:41 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	print_sleep_routine(t_philo *philo)
 			pthread_mutex_lock(&philo->g->enable_writing);
 			write_status("is sleeping\n", philo);
 			pthread_mutex_unlock(&philo->g->enable_writing);
-
 			pthread_mutex_unlock(&philo->g->check_died);
 			pthread_mutex_unlock(&philo->g->check);
 			return ;
