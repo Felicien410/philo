@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:26 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/21 08:01:06 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 08:02:52 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	handle_single_philosopher(t_philo *philo)
 
 int	check_death_time(t_philo *philo, long int actual)
 {
-	if ((diffe_time(actual, philo->last_meal_time) - 1) > philo->g->time_to_die)
+	if ((diffe_time(actual, philo->last_meal_time) - 2) > philo->g->time_to_die)
 	{
 		printf("(diffe_time(actual, philo->last_meal_time) - 1) = %ld\n", (diffe_time(actual, philo->last_meal_time) - 1));
 		pthread_mutex_lock(&philo->g->check_died);
