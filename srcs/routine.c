@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:31:18 by fcatteau          #+#    #+#             */
-/*   Updated: 2023/09/21 09:14:44 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/09/21 09:17:34 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	acquire_forks_and_eat(t_philo *philo)
 	if (philo->g->philo_died == 0 && philo->g->all_finish_philo == 0)
 	{
 		pthread_mutex_lock(&philo->g->enable_writing);
-		write_status("has taken a fork🍴\n", philo);
-		write_status("has taken a fork🍴\n", philo);
-		write_status("is eating🍜\n", philo);
+		write_status("has taken a fork\n", philo);
+		write_status("has taken a fork\n", philo);
+		write_status("is eating\n", philo);
 		pthread_mutex_unlock(&philo->g->enable_writing);
 		pthread_mutex_unlock(&philo->g->check_died);
 	}
@@ -43,7 +43,7 @@ void	print_sleep_routine(t_philo *philo)
 		if (!philo->g->philo_died)
 		{
 			pthread_mutex_lock(&philo->g->enable_writing);
-			write_status("is sleeping😴\n", philo);
+			write_status("is sleeping\n", philo);
 			pthread_mutex_unlock(&philo->g->enable_writing);
 
 			pthread_mutex_unlock(&philo->g->check_died);
@@ -70,7 +70,7 @@ void	print_thinking_routine(t_philo *philo)
 		if (!philo->g->philo_died)
 		{
 			pthread_mutex_lock(&philo->g->enable_writing);
-			write_status("is thinking🤔\n", philo);
+			write_status("is thinking\n", philo);
 			pthread_mutex_unlock(&philo->g->enable_writing);
 			pthread_mutex_unlock(&philo->g->check_died);
 			pthread_mutex_unlock(&philo->g->check);
