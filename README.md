@@ -21,7 +21,7 @@ Le projet "42 Philosophers" est conçu pour explorer les problèmes classiques d
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/42-philosophers.git
+git clone git@github.com:Felicien410/philo.git
 cd 42-philosophers
 make
-'''
+
